@@ -14,7 +14,8 @@ class ExpandCollapse extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.runOnFilterData(this.state.values.name);
+        // if (this.state.values.name)
+            this.props.runOnFilterData(this.state.values.name);
     };
 
     handleInputChange = (event) => {
@@ -52,7 +53,9 @@ class ExpandCollapse extends React.Component {
                             placeholder="Search Content"
                         />
                     </div>
-                    <button style={{ margin: "0 auto 0% 96.5%" }} className="btn btn-primary">Search</button>
+                    <div className="pull-right mbt10">
+                        <button className="btn btn-primary">Search</button>
+                    </div>
                 </form>
             </div>
         )

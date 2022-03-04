@@ -515,7 +515,7 @@ export class MockClientPaginationTable extends React.Component {
         const sortedPaginatedRows = this.currentRows();
 
         return (
-            <Grid fluid>
+            <>
                 <Table.PfProvider
                     striped
                     bordered
@@ -559,7 +559,7 @@ export class MockClientPaginationTable extends React.Component {
                     onLastPage={this.onLastPage}
                     onSubmit={this.onSubmit}
                 />
-            </Grid>
+            </>
         );
     }
 }

@@ -21,3 +21,7 @@ button {
 .modal-dialog {
   min-width: 75vw;
 }
+
+.mbt10 {
+  margin: 10px 0 10px 0;
+}

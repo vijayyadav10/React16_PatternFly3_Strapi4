@@ -4,7 +4,7 @@ export class SimpleTable extends React.Component {
 
     render() {
         return (
-            <table className="table dataTable table-striped table-bordered table-hover">
+            <table className="table table-bordered table-datatable table-hover table-striped Contents__table-element">
                 <thead>
                     <tr>
                         {Object.keys(contentAttribute).map((item, idx) => <th key={idx}>{contentAttribute[item]}</th>)}

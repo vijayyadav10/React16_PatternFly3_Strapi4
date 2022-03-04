@@ -348,6 +348,9 @@ export class MockClientPaginationTable extends React.Component {
 
             // rows and row selection state
             rows: this.props.mockRows,
+            
+            // const [reloadToken, setReloadToken] = useState(((new Date()).getTime()).toString())
+
             selectedRows: [],
 
             // pagination default states
@@ -369,13 +372,7 @@ export class MockClientPaginationTable extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log("this.props.mockRows", this.props.mockRows)
-        console.log("prevProps.mockRows", prevProps.mockRows)
-        console.log("this.state.rows",this.state.rows)
-        console.log("prevState",prevState.rows)
-        // console.log("componentDidUpdate", prevProps, prevState)
-        // console.log("componentDidUpdate length",prevProps.mockRows.length, this.state.rows.length)
-        if (this.props.mockRows.length !== prevProps.mockRows.length)
+        if (this.props.mockRows !== prevProps.mockRows)
             this.setState({ rows: this.props.mockRows })
     }
 

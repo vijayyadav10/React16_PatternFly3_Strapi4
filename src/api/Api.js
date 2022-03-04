@@ -26,3 +26,14 @@ export const fetchContents = async (collectionType) => {
     // const url = `http://localhost:1337/api/${collectionType}`;
     return await getContents(collectionType);
 }
+
+// FILTER API
+export const filterContentsByName = async (collectionType, contentName) => {
+    if (!collectionType || !contentName) {
+        throw new Error('collectionType or contentName is missing');
+    }
+
+    let url = `http://localhost:1337/api/${collectionType}?filters[name][$eq]=${contentName}`
+
+    return await axios.get(url)
+}

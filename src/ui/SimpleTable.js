@@ -1,36 +1,20 @@
 import React from "react";
 
 export class SimpleTable extends React.Component {
+
     render() {
-        console.log("%%%%SimpleTable%%%%", this.props.content)
         return (
             <table className="table dataTable table-striped table-bordered table-hover">
                 <thead>
                     <tr>
-                        {Object.keys(contentAttribute).map((item, idx) => <th key={idx}>{item}</th>)}
+                        {Object.keys(contentAttribute).map((item, idx) => <th key={idx}>{contentAttribute[item]}</th>)}
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Centro comercial Moctezuma</td>
-                        <td>Francisco Chang</td>
-                        <td>Mexico</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Centro comercial Moctezuma</td>
-                        <td>Francisco Chang</td>
-                        <td>Mexico</td>
-                        <td></td>
-                        <td></td>
+                        {this.props.content[0] && Object.keys(this.props.content[0]).map((item, idx) => {
+                            if (contentAttribute.hasOwnProperty(item)) return <td key={idx}>{this.props.content[0][item]}</td>
+                        })}
                     </tr>
                 </tbody>
             </table>
@@ -40,10 +24,10 @@ export class SimpleTable extends React.Component {
 
 
 const contentAttribute = {
-    Name: "Name",
-    Createdby: "Createdby",
-    Lastedited: "Lastedited",
+    name: "Name",
+    createdBy: "Createdby",
+    updatedAt: "Lastedited",
     Type: "Type",
-    Createddate: "Createddate",
-    status: "status"
+    createdAt: "Createddate",
+    selected: "status"
 }

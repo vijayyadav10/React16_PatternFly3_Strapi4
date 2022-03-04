@@ -33,7 +33,7 @@ export const filterContentsByName = async (collectionType, contentName) => {
         throw new Error('collectionType or contentName is missing');
     }
 
-    let url = `http://localhost:1337/api/${collectionType}?filters[name][$eq]=${contentName}`
+    let url = `http://localhost:1337/api/${collectionType}?filters[name][$containsi]=${contentName}`
 
     return await axios.get(url)
 }

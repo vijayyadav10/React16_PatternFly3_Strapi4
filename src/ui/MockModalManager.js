@@ -72,9 +72,12 @@ export default class MockModalManager extends Component {
     render() {
         return (
             <>
-                <Button bsStyle="primary" bsSize="large" onClick={this.open}>
-                    Launch basic modal
-                </Button>
+                <button
+                    type="submit"
+                    value="Submit"
+                    className="btn btn-primary pull-right" onClick={this.open}>
+                    Add existing content
+                </button>
 
                 <Modal style={{ minWidth: "72vw" }} show={this.state.show} onHide={this.close}>
                     <Modal.Header>

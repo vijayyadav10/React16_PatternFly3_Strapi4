@@ -31,14 +31,16 @@ class App extends Component {
 
     setSelectedContent = (selectedContentArr) => {
         this.setState({ selectedContent: selectedContentArr })
-        console.log("APPA",this.state)
+        console.log("APPA", this.state)
     }
 
     render() {
         return (
-            <div style={{ margin: "8rem" }}>
-                <MockModalManager rightSide={false} setSelectedContent={this.setSelectedContent} />
-                <SimpleTable content={this.state.selectedContent}/>
+            <div className='row'>
+                <div className='col-xs-12'>
+                    <MockModalManager rightSide={false} setSelectedContent={this.setSelectedContent} />
+                    <SimpleTable content={this.state.selectedContent} />
+                </div>
             </div>
         )
     }

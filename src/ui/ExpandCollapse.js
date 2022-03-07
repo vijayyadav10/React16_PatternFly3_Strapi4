@@ -35,7 +35,7 @@ class ExpandCollapse extends React.Component {
     render() {
         return (
             <div
-                // className="CollapsibleSection__title no-padding"
+                className="ContentsFilter well"
                 role="button"
                 tabIndex={0}
                 style={{ margin: '1rem 0rem' }}

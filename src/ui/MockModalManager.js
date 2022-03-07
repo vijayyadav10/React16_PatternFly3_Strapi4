@@ -7,7 +7,7 @@ import React, { Component } from 'react'
 import { fetchContents, filterContentsByName, getCollectionTypes } from '../api/Api'
 import { MockClientPaginationTable } from '../MockClientPaginationTable'
 import { TableBuilder } from '../helper/Helper'
-import { } from 'patternfly-react';
+import './MockModalManager.css'
 import ExpandCollapse from './ExpandCollapse'
 
 export default class MockModalManager extends Component {
